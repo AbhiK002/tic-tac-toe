@@ -1,12 +1,12 @@
 from tkinter import *
 
 
-class App:
-    def __init__(self, root):
-        self.root = root
-        self.root.geometry("400x500")
-        self.root.config(bg="black")
-        self.root.title("Tic Tac Toe")
+class App(Tk):
+    def __init__(self):
+        super().__init__()
+        self.geometry("400x500")
+        self.config(bg="black")
+        self.title("Tic Tac Toe")
         
         self.score_x = IntVar()
         self.score_x.set(0)
@@ -18,7 +18,7 @@ class App:
         self.frozen = False
         self.clicks = 0
 
-        self.scoreframe = Frame(self.root, bg="yellow")
+        self.scoreframe = Frame(self, bg="yellow")
         self.scoreframe.grid(row=0, column=0, sticky=EW)
         self.scoreframe.rowconfigure(0, weight=1)
         self.scoreframe.columnconfigure(2, weight=1)
@@ -44,38 +44,24 @@ class App:
         self.labsc_o.grid(row=0, column=3)
         
         
-        self.boardframe = Frame(self.root, bg="black")
+        self.boardframe = Frame(self, bg="black")
         self.boardframe.grid(row=1, column=0, sticky=NSEW)
         
-        self.buttonframe = Frame(self.root, bg="black", height=50)
+        self.buttonframe = Frame(self, bg="black", height=50)
         self.buttonframe.grid(row=2, column=0, sticky=EW)
         self.buttonframe.rowconfigure(0, weight=1)
         self.buttonframe.grid_propagate(False)
         self.playagainbutton = Button(self.buttonframe, text="Play Again", state=DISABLED, disabledforeground="#242424", bg="#353535", fg="lime", font=('Calibri', 16, "bold"), command=self.clear_board)
         self.playagainbutton.grid(row=0, column=0, sticky=NS, padx=10, pady=2)
 
-        self.root.columnconfigure(0, weight=1)
-        self.root.rowconfigure(1, weight=1)
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(1, weight=1)
         
         for i in range(3):
             self.boardframe.rowconfigure(i, weight=1, uniform="1")
             self.boardframe.columnconfigure(i, weight=1, uniform="1")
 
-        self.TL = StringVar()
-        self.TM = StringVar()
-        self.TR = StringVar()
-        self.ML = StringVar()
-        self.MM = StringVar()
-        self.MR = StringVar()
-        self.BL = StringVar()
-        self.BM = StringVar()
-        self.BR = StringVar()
-        
-        self.board = [
-            [self.TL, self.TM, self.TR],
-            [self.ML, self.MM, self.MR],
-            [self.BL, self.BM, self.BR]
-            ]
+        self.board = [[StringVar() for _ in range(3)] for _ in range(3)]
         self.board_labels = []
         
         for i in range(3):
@@ -160,9 +146,8 @@ class App:
         return self.clicks == 9
     
     def start(self):
-        self.root.mainloop()
+        self.mainloop()
 
 
 if __name__ == '__main__':
-    root = Tk()
-    App(root)
+    App()
