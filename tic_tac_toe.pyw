@@ -7,6 +7,7 @@ class App(Tk):
         self.geometry("400x500")
         self.config(bg="black")
         self.title("Tic Tac Toe")
+        self.resizable(False, False)
         
         self.score_x = IntVar()
         self.score_x.set(0)
