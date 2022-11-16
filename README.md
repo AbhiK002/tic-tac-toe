@@ -1,7 +1,7 @@
 # TicTacToe
 A GUI based Tic Tac Toe Game made with Python
 
-![asdsa](https://user-images.githubusercontent.com/68178267/201950369-008e8fc7-d46a-4ad6-adcc-561ead45622a.png)
+![image](https://user-images.githubusercontent.com/68178267/202287547-cc81364d-9e5b-4edb-af62-63fc1763b5f9.png)
 
 ## Info
 - Click on any of the boxes to enter your symbol and play the game
