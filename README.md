@@ -6,12 +6,13 @@ A GUI based Tic Tac Toe Game made with Python
 ## Info
 - Click on any of the boxes to enter your symbol and play the game
 - Alternatively, use the numpad keys to enter symbols, and press ENTER to start next round
+```
 7  |  8  |  9
 --------------
 4  |  5  |  6
 --------------
 1  |  2  |  3
-
+```
 - A very basic game application with minimal features
 - Goes on endlessly
 - Currently only has 2 player mode
