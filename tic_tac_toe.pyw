@@ -55,7 +55,7 @@ class App(Tk):
         self.buttonframe.grid_propagate(False)
         self.playagainbutton = Button(self.buttonframe, text="Play Again", state=DISABLED, disabledforeground="#242424", bg="#353535", fg="lime", font=('Calibri', 16, "bold"), command=self.clear_board)
         self.playagainbutton.grid(row=0, column=0, sticky=NS, padx=10, pady=2)
-
+        
         self.columnconfigure(0, weight=1)
         self.rowconfigure(1, weight=1)
         
@@ -65,14 +65,17 @@ class App(Tk):
 
         self.board = [[StringVar() for _ in range(3)] for _ in range(3)]
         self.board_labels = []
-        
+        temp = 0
+        nums = ['7', '8', '9', '4', '5', '6', '1', '2', '3']
         for i in range(3):
             a = []
             for j in range(3):
                 b = Label(self.boardframe, textvariable=self.board[i][j], font=('Calibri', 72), bg="#353535")
                 a.append(b)
                 b.grid(row=i, column=j, sticky=NSEW, padx=10, pady=10)
-                b.bind("<Button-1>", lambda event, a = self.board[i][j], c = b: self.enter_symbol(a, c)) 
+                b.bind("<Button-1>", lambda _, a = self.board[i][j], c = b: self.enter_symbol(a, c))
+                self.bind(nums[temp], lambda _, a = self.board[i][j], c = b: self.enter_symbol(a, c))
+                temp += 1
             self.board_labels.append(a)
             
         self.start()
@@ -94,6 +97,7 @@ class App(Tk):
                 self.board_labels[i][j].config(bg="#353535")
         self.frozen = False
         self.playagainbutton.config(state=DISABLED)
+        self.bind("<Return>", lambda _: [print()])
         self.clicks = 0
         self.change_curr()
         self.labturn.config(text="Turn")
@@ -110,6 +114,7 @@ class App(Tk):
             if win:
                 self.frozen = True
                 self.playagainbutton.config(state=NORMAL)
+                self.bind("<Return>", lambda _: [self.clear_board()])
                 self.labturn.config(text="WINNER")
                 if win == "X":
                     self.score_x.set(self.score_x.get() + 1)
@@ -125,6 +130,7 @@ class App(Tk):
                     self.labturnsym.config(fg="white")
                     self.frozen = True
                     self.playagainbutton.config(state=NORMAL)
+                    self.bind("<Return>", lambda _: [self.clear_board()])
                 else:
                     self.change_curr()
 
