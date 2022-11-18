@@ -70,7 +70,8 @@ class App(Tk):
         for i in range(3):
             a = []
             for j in range(3):
-                b = Label(self.boardframe, textvariable=self.board[i][j], font=('Calibri', 72), bg="#353535")
+                b = Label(self.boardframe, textvariable=self.board[i][j], font=('Calibri', 72), bg="#353535",fg="#696969")
+                self.board[i][j].set(nums[temp])
                 a.append(b)
                 b.grid(row=i, column=j, sticky=NSEW, padx=10, pady=10)
                 b.bind("<Button-1>", lambda _, a = self.board[i][j], c = b: self.enter_symbol(a, c))
@@ -91,10 +92,14 @@ class App(Tk):
             self.labturnsym.config(fg=self.current_color)
 
     def clear_board(self):
+        temp = 0
+        nums = ['7', '8', '9', '4', '5', '6', '1', '2', '3']
         for i in range(3):
             for j in range(3):
                 self.board[i][j].set("")
-                self.board_labels[i][j].config(bg="#353535")
+                self.board_labels[i][j].config(bg="#353535", fg="#696969")
+                self.board[i][j].set(nums[temp])
+                temp += 1
         self.frozen = False
         self.playagainbutton.config(state=DISABLED)
         self.bind("<Return>", lambda _: [print()])
