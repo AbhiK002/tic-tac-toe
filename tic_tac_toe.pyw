@@ -49,12 +49,13 @@ class App(Tk):
         self.boardframe = Frame(self, bg="black")
         self.boardframe.grid(row=1, column=0, sticky=NSEW)
         
-        self.buttonframe = Frame(self, bg="black", height=50)
+        self.buttonframe = Frame(self, bg="black", height=45)
         self.buttonframe.grid(row=2, column=0, sticky=EW)
         self.buttonframe.rowconfigure(0, weight=1)
+        self.buttonframe.columnconfigure(0, weight=1)
         self.buttonframe.grid_propagate(False)
         self.playagainbutton = Button(self.buttonframe, text="Play Again", state=DISABLED, disabledforeground="#242424", bg="#353535", fg="lime", font=('Calibri', 16, "bold"), command=self.clear_board)
-        self.playagainbutton.grid(row=0, column=0, sticky=NS, padx=10, pady=2)
+        self.playagainbutton.grid(row=0, column=0, padx=10, pady=5, sticky=NS)
         
         self.columnconfigure(0, weight=1)
         self.rowconfigure(1, weight=1)
