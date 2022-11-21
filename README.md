@@ -2,7 +2,7 @@
 # TicTacToe
 A GUI based Tic Tac Toe Game made with Python
 
-![image](https://user-images.githubusercontent.com/68178267/202287547-cc81364d-9e5b-4edb-af62-63fc1763b5f9.png)
+![image](https://user-images.githubusercontent.com/68178267/203131825-3c3f949d-0b54-436f-a36b-fac712f4ecc7.png)
 
 ## Info
 - Click on any of the boxes to enter your symbol and play the game
@@ -17,5 +17,8 @@ A GUI based Tic Tac Toe Game made with Python
 - A very basic game application with minimal features
 - Goes on endlessly
 - Currently only has 2 player mode
+- Play with custom usernames
 - Click "Play Again" to start the next round
+- Click "Reset Scores" to end the current game
+- Start a new game with new usernames after resetting the score
 - Enjoy!
