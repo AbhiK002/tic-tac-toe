@@ -9,6 +9,10 @@ class App(Tk):
         self.config(bg="black")
         self.title("Tic Tac Toe")
         self.resizable(False, False)
+        try:
+            self.iconphoto(True, PhotoImage(file="tttlogo.png"))
+        except TclError:
+            pass
         
         self.score_x = IntVar()
         self.score_x.set(0)
