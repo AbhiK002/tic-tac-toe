@@ -1,6 +1,7 @@
 ![tttlogo_smol](https://user-images.githubusercontent.com/68178267/202846969-128934aa-0bd8-4cb0-8c89-78465cd554cb.png)
 # TicTacToe
 A GUI based Tic Tac Toe Game made with Python
+### [Download Here](https://github.com/AbhiK002/tic-tac-toe/releases/latest)
 
 ![image](https://user-images.githubusercontent.com/68178267/203131825-3c3f949d-0b54-436f-a36b-fac712f4ecc7.png)
 
