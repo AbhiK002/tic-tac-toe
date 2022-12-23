@@ -3,11 +3,12 @@
 A GUI based Tic Tac Toe Game made with Python
 ### [Download Here](https://github.com/AbhiK002/tic-tac-toe/releases/latest)
 
-![image](https://user-images.githubusercontent.com/68178267/203131825-3c3f949d-0b54-436f-a36b-fac712f4ecc7.png)
+![asdsada](https://user-images.githubusercontent.com/68178267/209412931-91efe397-d4f9-41ee-8819-78511aeeaab2.png)
+
 
 ## Info
-- Click on any of the boxes to enter your symbol and play the game
-- Alternatively, use the numpad keys to enter your symbol, and press ENTER to start next round
+- Play the game using your mouse or keyboard
+- You can use the number keys to play the game as shown below, and press ENTER to start next round
 ```
 7  |  8  |  9
 --------------
@@ -15,9 +16,10 @@ A GUI based Tic Tac Toe Game made with Python
 --------------
 1  |  2  |  3
 ```
-- A very basic game application with minimal features
-- Goes on endlessly
-- Currently only has 2 player mode
+- 3 Gamemodes:
+  - 2-Player
+  - Computer (Normal Mode)
+  - Hard-Bot (Hard Mode)
 - Play with custom usernames
 - Click "Play Again" to start the next round
 - Click "Reset Scores" to end the current game
