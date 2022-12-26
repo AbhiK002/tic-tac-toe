@@ -10,8 +10,6 @@ A GUI based Tic Tac Toe Game made with Python
 OR
 - Download the latest release (exe file) of the game [here](https://github.com/AbhiK002/tic-tac-toe/releases/latest)
 
-![asdsada](https://user-images.githubusercontent.com/68178267/209412931-91efe397-d4f9-41ee-8819-78511aeeaab2.png)
-
 
 ## Info
 - Play the game using your mouse or keyboard
@@ -32,3 +30,5 @@ OR
 - Click "Reset Scores" to end the current game
 - Start a new game with new usernames after resetting the score
 - Enjoy!
+
+![asdsada](https://user-images.githubusercontent.com/68178267/209412931-91efe397-d4f9-41ee-8819-78511aeeaab2.png)
