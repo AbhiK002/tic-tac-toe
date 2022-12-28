@@ -31,4 +31,6 @@ OR
 - Start a new game with new usernames after resetting the score
 - Enjoy!
 
-![asdsada](https://user-images.githubusercontent.com/68178267/209412931-91efe397-d4f9-41ee-8819-78511aeeaab2.png)
+![ss1](https://user-images.githubusercontent.com/68178267/209808639-9a8aeb75-00f8-4832-b4b1-b227e34877e9.png)
+![ss2](https://user-images.githubusercontent.com/68178267/209808642-69fbdcb2-ddd8-41ce-a961-0407a8d03d3f.png)
+
