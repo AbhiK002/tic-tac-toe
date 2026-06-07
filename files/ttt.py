@@ -1,10 +1,21 @@
 from tkinter import *
 import tkinter.messagebox
+import os
+import sys
 
 try:
     from files import AI
 except ModuleNotFoundError:
     exit("AI file not found")
+
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 
 class App(Tk):
@@ -23,7 +34,7 @@ class App(Tk):
         self.columnconfigure(0, weight=1)
         self.rowconfigure(0, weight=1)
         try:
-            self.iconphoto(True, PhotoImage(file="files/tttlogo.png"))
+            self.iconphoto(True, PhotoImage(file=resource_path("./files/tttlogo.png")))
         except TclError:
             pass
 
